@@ -1,23 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import "./App.css";
+import Hero from "./components/Hero";
+import AboutUs from "./components/AboutUs";
+import PastProjects from "./components/PastProjects";
+import Contact from "./components/Contact";
+import Donate from "./components/Donate";
+import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
+import Mission from "./components/Mission";
+import Lenis from "@studio-freight/lenis";
 
 function App() {
+  console.log("The app is loading");
+
+  useEffect(() => {
+    const lenis = new Lenis();
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    return () => {
+      // Clean up Lenis if needed
+    };
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <Hero />
+      <Mission />
+      <AboutUs />
+      <div style={{ height: "390vh" }}></div>{" "}
+      {/* Spacer to delay PastProjects animations */}
+      <PastProjects />
+      <Contact />
+      <Donate />
+      <Footer />
     </div>
   );
 }

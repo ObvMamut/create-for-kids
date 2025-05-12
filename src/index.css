@@ -1,0 +1,40 @@
+@font-face {
+    font-family: Arial;
+}
+@font-face {
+    font-family: Arial;
+}
+
+body {
+    margin: 0;
+    font-family:
+        "Body",
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        "Roboto",
+        "Oxygen",
+        "Ubuntu",
+        "Cantarell",
+        "Fira Sans",
+        "Droid Sans",
+        "Helvetica Neue",
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    background-color: #f1efec;
+}
+
+code {
+    font-family:
+        source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+h2 {
+    font-family: "Title";
+}
+
+* {
+    box-sizing: border-box;
+}

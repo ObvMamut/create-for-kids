@@ -1,0 +1,37 @@
+.about-us {
+    position: relative;
+    margin-top: 2vh;
+    padding: 0 0px;
+    background-color: #f1efec;
+}
+
+.section-header {
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 50px;
+}
+
+.section-header h1 {
+    font-family: "Title";
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.section-header p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.cards-container {
+    position: relative;
+}
+
+@media (max-width: 1100px) {
+    .about-us {
+        margin-top: 30vh;
+    }
+
+    .section-header h1 {
+        font-size: 2.5rem;
+    }
+}
