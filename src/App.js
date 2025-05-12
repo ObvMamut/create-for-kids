@@ -3,7 +3,6 @@ import "./App.css";
 import Hero from "./components/Hero";
 import AboutUs from "./components/AboutUs";
 import PastProjects from "./components/PastProjects";
-import Contact from "./components/Contact";
 import Donate from "./components/Donate";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
@@ -37,7 +36,6 @@ function App() {
       <div style={{ height: "390vh" }}></div>{" "}
       {/* Spacer to delay PastProjects animations */}
       <PastProjects />
-      <Contact />
       <Donate />
       <Footer />
     </div>

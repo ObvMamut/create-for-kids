@@ -1,74 +1,61 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "./Navbar.css";
+import logo from "../../images/img1.png"; // Make sure to add your logo to this path
 
 const Navbar = () => {
-  const [scrolled, setScrolled] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      const isScrolled = window.scrollY > 50;
-      if (isScrolled !== scrolled) {
-        setScrolled(isScrolled);
-      }
+      setIsScrolled(window.scrollY > 50);
     };
 
     window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [scrolled]);
-
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
-      <div className="navbar-container">
-        <div className="navbar-logo">
-          <a href="/" className="logo">
-            CharityName
-          </a>
+    <nav
+      className={`navbar ${isScrolled ? "scrolled" : ""} ${isMenuOpen ? "menu-open" : ""}`}
+    >
+      <div className="nav-container">
+        <div className="nav-logo">
+          <img src={logo} alt="Create for Kids Logo" />
         </div>
 
-        <div className={`navbar-menu ${menuOpen ? "active" : ""}`}>
-          <ul className="navbar-links">
-            <li className="nav-item">
-              <a href="#home" className="nav-link">
-                Home
-              </a>
-            </li>
-            <li className="nav-item">
-              <a href="#mission" className="nav-link">
-                Our Mission
-              </a>
-            </li>
-            <li className="nav-item">
-              <a href="#achievements" className="nav-link">
-                Achievements
-              </a>
-            </li>
-            <li className="nav-item">
-              <a href="#volunteer" className="nav-link">
-                Volunteer
-              </a>
-            </li>
-            <li className="nav-item">
-              <a href="#donate" className="nav-link donate-button">
-                Donate
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <div className="mobile-menu-button" onClick={toggleMenu}>
-          <div className={`hamburger ${menuOpen ? "active" : ""}`}>
+        <div className="nav-toggle" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          <div className="toggle-inner">
             <span></span>
             <span></span>
             <span></span>
           </div>
+        </div>
+
+        <div className="nav-links">
+          <div className="link-wrapper">
+            <a href="#home" className="nav-link">
+              <span className="link-text">Home</span>
+            </a>
+          </div>
+          <div className="link-wrapper">
+            <a href="#mission" className="nav-link">
+              <span className="link-text">Mission</span>
+            </a>
+          </div>
+          <div className="link-wrapper">
+            <a href="#about" className="nav-link">
+              <span className="link-text">About</span>
+            </a>
+          </div>
+          <div className="link-wrapper">
+            <a href="#projects" className="nav-link">
+              <span className="link-text">Projects</span>
+            </a>
+          </div>
+          <a href="#donate" className="nav-button">
+            Donate
+          </a>
         </div>
       </div>
     </nav>
