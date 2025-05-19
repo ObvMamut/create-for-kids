@@ -1,10 +1,10 @@
 export const projects = [
   {
-    title: "Matthias Leidinger",
+    title: "Karol Dąbrowski",
     description:
-      "Originally hailing from Austria, Berlin-based photographer Matthias Leindinger is a young creative brimming with talent and ideas.",
-    src: "img1.png",
-    url: "https://www.ignant.com/2023/03/25/ad2186-matthias-leidingers-photographic-exploration-of-awe-and-wonder/",
+      "Hey, I'm Karol, high schooler and president of the Warsaw Create for Kids Chapter, bringing happy vibes to hospitals. I worship Nolan films and occasionnally trying not to lose money on stocks",
+    src: "karol.jpeg",
+    url: "/src/images/karol.jpg",
     color: "#BBACAF",
   },
   {

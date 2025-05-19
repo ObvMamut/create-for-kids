@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import "./Card.css";
 import { useTransform, motion, useScroll } from "framer-motion";
 
+
 const Card = ({
   i,
   title,
@@ -56,8 +57,9 @@ const Card = ({
           </div>
 
           <div className="image-container">
-            <motion.div className="inner" style={{ scale: imageScale }}>
-              <img src={`/images/${src}`} alt={title} />
+            <motion.div className="inner" style={{scale: imageScale}}>
+              {/*<img src={`../../images/${src}`} alt={title}/>*/}
+              <img src={src} alt={'karol'}/>
             </motion.div>
           </div>
         </div>

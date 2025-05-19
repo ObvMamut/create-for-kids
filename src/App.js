@@ -8,6 +8,9 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Mission from "./components/Mission";
 import Lenis from "@studio-freight/lenis";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 function App() {
   console.log("The app is loading");
@@ -22,9 +25,25 @@ function App() {
 
     requestAnimationFrame(raf);
 
-    return () => {
-      // Clean up Lenis if needed
-    };
+      // Initial global setup
+      const setupScrollTrigger = () => {
+          // Force a recalculation of all ScrollTriggers
+          ScrollTrigger.refresh(true);
+
+          console.log("App component: ScrollTrigger refreshed");
+      };
+
+      // Run on component mount with a slight delay
+      const initTimer = setTimeout(setupScrollTrigger, 500);
+
+      // Also run when the page is fully loaded
+      window.addEventListener('load', setupScrollTrigger);
+
+      // Clean up
+      return () => {
+          clearTimeout(initTimer);
+          window.removeEventListener('load', setupScrollTrigger);
+      };
   }, []);
 
   return (
