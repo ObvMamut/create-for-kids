@@ -6,13 +6,14 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
-/* New wrapper to correctly position the Past Projects section */
+/* Reduced wrapper height to minimize gap */
 .past-projects-wrapper {
     position: relative;
-    height: 300vh; /* Ensures enough scroll space for the animation */
+    height: 200vh; /* Reduced from 300vh to minimize gap */
     width: 100%;
     overflow: hidden;
-    z-index: 10; /* Ensure it's above other elements */
+    z-index: 10;
+    margin-bottom: -150vh; /* Negative margin to pull next section closer */
 }
 
 .wrapper {
@@ -119,12 +120,16 @@ section p {
     font-family: "Playfair Display", serif;
     color: #333;
     z-index: 20;
-    opacity: 0; /* Start with opacity 0 */
+    opacity: 0;
 }
 
-/* Debug helper to see ScrollTrigger markers better */
-.gsap-marker-start, .gsap-marker-end, .gsap-marker-scroller-start, .gsap-marker-scroller-end {
-    z-index: 1000;
+/* Hide GSAP markers completely */
+.gsap-marker-start,
+.gsap-marker-end,
+.gsap-marker-scroller-start,
+.gsap-marker-scroller-end {
+    display: none !important;
+    visibility: hidden !important;
 }
 
 @media (max-width: 768px) {
@@ -152,5 +157,9 @@ section p {
 
     .col p {
         width: 100%;
+    }
+
+    .past-projects-wrapper {
+        margin-bottom: -30vh;
     }
 }

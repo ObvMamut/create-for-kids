@@ -24,10 +24,8 @@ const PastProjects = () => {
     const header = headerRef.current;
     const wrapper = wrapperRef.current;
 
-    // Force immediate recalculation of all ScrollTriggers
     ScrollTrigger.refresh(true);
 
-    // This function will be called once the DOM is definitely ready
     const initScrollTriggers = () => {
       console.log("Initializing Past Projects ScrollTrigger");
 
@@ -38,13 +36,11 @@ const PastProjects = () => {
         }
       });
 
-      // Make the wrapper element visible with a height large enough to scroll
       if (wrapper) {
         wrapper.style.visibility = "visible";
-        wrapper.style.height = "300vh"; // Force a large scrollable area
+        wrapper.style.height = "250vh"; // Reduced height
       }
 
-      // Force the section to be visible regardless of scroll position
       if (container) {
         container.style.visibility = "visible";
       }
@@ -54,31 +50,32 @@ const PastProjects = () => {
         xPercent: -100 * (sections.length - 1),
         ease: "none",
         scrollTrigger: {
-          trigger: wrapper, // Use the wrapper as trigger
+          trigger: wrapper,
           pin: true,
-          anticipatePin: 1, // Helps with smoother pinning
-          scrub: 0.5, // Smoother scrubbing
-          start: "top top", // Start at the top of the viewport
-          end: () => "+=" + window.innerWidth * 2, // Dynamic end based on window width
+          anticipatePin: 1,
+          scrub: 0.5,
+          start: "top top",
+          end: () => "+=" + window.innerWidth * 1.5, // Reduced multiplier
           id: "pastProjectsScroll",
           invalidateOnRefresh: true,
-          markers: true, // Keep markers on for debugging
+          markers: false, // Disable markers to hide green/red text
           pinSpacing: true,
+          // Add onLeave callback to ensure scroll continues properly
+          onLeave: () => {
+            console.log("Past Projects section left - enabling scroll");
+            // Force enable scrolling after leaving the section
+            document.body.style.overflow = "auto";
+          },
+          onLeaveBack: () => {
+            console.log("Past Projects section left back - enabling scroll");
+            document.body.style.overflow = "auto";
+          },
           onEnter: () => {
             console.log("Past Projects section entered");
             gsap.to(header, { opacity: 1, duration: 0.3 });
           },
-          onLeave: () => {
-            console.log("Past Projects section left");
-          },
           onEnterBack: () => {
             console.log("Past Projects section entered back");
-          },
-          onLeaveBack: () => {
-            console.log("Past Projects section left back");
-          },
-          onUpdate: (self) => {
-            console.log("Past Projects scroll progress:", self.progress.toFixed(2));
           }
         },
       });
@@ -89,10 +86,11 @@ const PastProjects = () => {
         scrollTrigger: {
           trigger: wrapper,
           start: "top top",
-          end: () => "+=" + window.innerWidth * 2,
+          end: () => "+=" + window.innerWidth * 1.5, // Match the main animation
           scrub: 0.5,
           id: "pastProjectsMask",
           invalidateOnRefresh: true,
+          markers: false, // Disable markers
         },
       });
 
@@ -114,25 +112,26 @@ const PastProjects = () => {
             id: `pastProjectsSection${i}`,
             invalidateOnRefresh: true,
             toggleActions: "play none none reverse",
+            markers: false, // Disable markers
           },
         });
       });
+
+      // Ensure scroll is enabled after all animations
+      setTimeout(() => {
+        document.body.style.overflow = "auto";
+      }, 100);
     };
 
-    // Delay initialization to ensure DOM is fully loaded
     const initTimeout = setTimeout(initScrollTriggers, 1000);
-
-    // Also initialize on window load
     window.addEventListener("load", initScrollTriggers);
 
-    // Add resize handler
     const resizeHandler = () => {
       ScrollTrigger.refresh(true);
     };
     window.addEventListener("resize", resizeHandler);
 
     return () => {
-      // Clean up
       clearTimeout(initTimeout);
       window.removeEventListener("load", initScrollTriggers);
       window.removeEventListener("resize", resizeHandler);
@@ -142,6 +141,9 @@ const PastProjects = () => {
           trigger.kill();
         }
       });
+
+      // Ensure scrolling is restored
+      document.body.style.overflow = "auto";
     };
   }, []);
 

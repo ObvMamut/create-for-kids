@@ -87,7 +87,7 @@ const AboutUs = () => {
         if (aboutUsSection) {
             // Adjust the calculation to be more proportional to the number of cards
             // This leaves less empty space at the bottom
-            const minHeight = `${projects.length * 50 + 20}vh`; // Reduced from 70vh per project
+            const minHeight = `${projects.length * 50 - 15}vh`; // Reduced from 70vh per project
             aboutUsSection.style.minHeight = minHeight;
         }
 
