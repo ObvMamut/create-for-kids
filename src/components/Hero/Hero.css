@@ -1,9 +1,8 @@
 .hero {
     height: 100vh;
-    min-height: 600px;
     width: 100%;
     display: flex;
-    align-items: flex-start;
+    align-items: flex-start; /* Changed to position content at the top */
     justify-content: center;
     position: relative;
     overflow: hidden;
@@ -34,7 +33,6 @@
     background-image: url("/src/images/background.jpeg");
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
     filter: brightness(0.9) contrast(1);
 }
 
@@ -42,10 +40,9 @@
     text-align: center;
     color: white;
     max-width: 900px;
-    padding: 15vh 20px 0;
+    padding: 10vh 20px 0; /* Added padding-top for positioning */
     z-index: 2;
     position: relative;
-    width: 100%;
 }
 
 .hero-title {
@@ -56,15 +53,13 @@
         "Segoe UI",
         Roboto,
         sans-serif;
-    font-size: 6.5rem;
+    font-size: 6.5rem; /* Reduced for slightly smaller text */
     font-weight: 800;
     margin-bottom: 30px;
     letter-spacing: -2px;
     line-height: 1.1;
     color: white;
     text-shadow: 0 6px 30px rgba(0, 0, 0, 0.5);
-    word-break: break-word;
-    hyphens: auto;
 }
 
 .hero-subtitle {
@@ -145,175 +140,28 @@
     }
 }
 
-/* Tablet styles */
-@media (max-width: 1024px) {
-    .hero-title {
-        font-size: 5.5rem;
-        letter-spacing: -1.5px;
-    }
-
-    .hero-subtitle {
-        font-size: 1.6rem;
-        margin-bottom: 45px;
-    }
-
-    .hero-content {
-        padding: 12vh 20px 0;
-    }
-}
-
-/* Mobile landscape and smaller tablets */
 @media (max-width: 768px) {
-    .hero {
-        min-height: 500px;
-    }
-
-    .hero-background {
-        background-attachment: scroll; /* Better mobile performance */
-        background-position: center center;
-    }
-
-    .hero-content {
-        padding: 10vh 15px 0;
-        max-width: 100%;
-    }
-
     .hero-title {
-        font-size: 4rem;
+        font-size: 3.5rem; /* Adjusted for smaller screens */
         letter-spacing: -1px;
-        margin-bottom: 25px;
-        line-height: 1.2;
     }
 
     .hero-subtitle {
         font-size: 1.4rem;
         margin-bottom: 40px;
-        padding: 0 10px;
-        line-height: 1.4;
     }
 
     .floating-shape {
-        opacity: 0.3;
-    }
-
-    .floating-shape:nth-child(1),
-    .floating-shape:nth-child(3) {
-        width: 60px;
-        height: 60px;
-    }
-
-    .floating-shape:nth-child(2),
-    .floating-shape:nth-child(4) {
-        width: 80px;
-        height: 80px;
+        display: none;
     }
 }
 
-/* Mobile portrait */
 @media (max-width: 480px) {
-    .hero {
-        min-height: 450px;
-    }
-
-    .hero-content {
-        padding: 8vh 10px 0;
-    }
-
     .hero-title {
-        font-size: 3rem;
-        margin-bottom: 20px;
-        letter-spacing: -0.5px;
+        font-size: 2.8rem; /* Adjusted for smaller screens */
     }
 
     .hero-subtitle {
         font-size: 1.2rem;
-        margin-bottom: 35px;
-        padding: 0 5px;
     }
-
-    .floating-shape {
-        display: none; /* Hide on very small screens for better performance */
-    }
-}
-
-/* Very small screens */
-@media (max-width: 360px) {
-    .hero-title {
-        font-size: 2.5rem;
-        line-height: 1.1;
-    }
-
-    .hero-subtitle {
-        font-size: 1.1rem;
-        line-height: 1.3;
-    }
-
-    .hero-content {
-        padding: 7vh 8px 0;
-    }
-}
-
-/* High resolution displays */
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    .hero-background {
-        image-rendering: -webkit-optimize-contrast;
-        image-rendering: crisp-edges;
-    }
-}
-
-/* Landscape orientation on mobile */
-@media (max-width: 768px) and (orientation: landscape) {
-    .hero {
-        min-height: 100vh;
-    }
-
-    .hero-content {
-        padding: 5vh 15px 0;
-    }
-
-    .hero-title {
-        font-size: 3.5rem;
-        margin-bottom: 15px;
-    }
-
-    .hero-subtitle {
-        font-size: 1.3rem;
-        margin-bottom: 25px;
-    }
-}
-
-/* Reduce motion for accessibility */
-@media (prefers-reduced-motion: reduce) {
-    .floating-shape {
-        animation: none;
-    }
-
-    .hero-background-motion {
-        transform: none !important;
-    }
-}
-
-/* Dark mode support */
-@media (prefers-color-scheme: dark) {
-    .hero-background {
-        filter: brightness(0.8) contrast(1.1);
-    }
-}
-
-/* Touch device optimizations */
-@media (hover: none) and (pointer: coarse) {
-    .hero {
-        -webkit-overflow-scrolling: touch;
-    }
-
-    .hero-background {
-        background-attachment: scroll;
-        will-change: transform;
-    }
-}
-
-/* Focus styles for accessibility */
-.hero:focus-within {
-    outline: 2px solid rgba(255, 255, 255, 0.5);
-    outline-offset: 4px;
 }
