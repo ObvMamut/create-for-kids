@@ -16,16 +16,16 @@ const Donate = () => {
                 >
                     <h1>Support Our Mission</h1>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                        You can support us financially. Dontations are split among the following : creating cads, bringing toys, art supplies, delivering care packages and extra expenses !
                     </p>
 
                     <a
-                        href="https://lorem.com"
+                        href="https://pomagam.pl/rhweyh"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="donate-link"
                     >
-                        Donate on GoFundMe
+                        Donate on pomagam.pl
                     </a>
 
                     <div className="donate-footer">

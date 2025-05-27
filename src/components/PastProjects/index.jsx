@@ -4,9 +4,9 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./PastProjects.css";
 
 // Import images
-import projectImage1 from "./img1.png";
-import projectImage2 from "./img1.png";
-import projectImage3 from "./img1.png";
+import projectImage1 from "../../images/bake-sale-laura-1.jpeg";
+import projectImage3 from "../../images/easter-workshop-dziewczynka-z-kartkami.jpeg";
+import projectImage2 from "../../images/zbieranie-kartek-1.jpeg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -38,7 +38,7 @@ const PastProjects = () => {
 
       if (wrapper) {
         wrapper.style.visibility = "visible";
-        wrapper.style.height = "250vh"; // Reduced height
+        wrapper.style.height = "100vh"; // Reduced height
       }
 
       if (container) {
@@ -154,7 +154,7 @@ const PastProjects = () => {
   };
 
   return (
-      <div className="past-projects-wrapper" ref={wrapperRef}>
+      <div className="past-projects-wrapper" ref={wrapperRef} id="past-projects">
         <div className="container scrollx" ref={containerRef}>
           <div className="header" ref={headerRef}>
             Past Projects
@@ -199,20 +199,16 @@ const PastProjects = () => {
                 <img src={projectImage1} alt="Project 1" />
               </div>
               <div className="text-container">
-                <span className="anim">Advanced</span>
-                <h1 className="anim">Signify Elegance</h1>
+                <span className="anim">First action !</span>
+                <h1 className="anim">Bake Sale</h1>
                 <div className="col anim">
                   <p>
-                    Lorem ipsum dolor sit amet consectetur. Egestas euismod nec
-                    sit sed massa turpis in. Sit praesent arcu leo lectus
-                    pellentesque. Ornare elit orci morbi volutpat. Ut fermentum
-                    lorem morbi quis risus amet urna. Urna egestas lorem.
+                    We are really excited to announce that we have recently hosted our first fundraising bake sale!
+                    Thank you everyone for participating and especially our vice president Laura for organizing the event.
+                    The raised money will help us in our mission of brightening the days of children in local hospitals
                   </p>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur. Egestas euismod nec
-                    sit sed massa turpis in. Sit praesent arcu leo lectus
-                    pellentesque. Ornare elit orci morbi volutpat. Ut fermentum
-                    lorem morbi quis risus amet urna. Urna egestas lorem.
+                    On monday, March 23 we had our first fundraising! Create For Kids Warsaw's vice president Laura organised a bake sale at her school and collected 260zł!
                   </p>
                 </div>
               </div>
@@ -225,21 +221,13 @@ const PastProjects = () => {
                 <img src={projectImage2} alt="Project 2" />
               </div>
               <div className="text-container">
-                <span className="anim">Advanced</span>
-                <h1 className="anim">Signify Elegance</h1>
+                <span className="anim">Second Action !</span>
+                <h1 className="anim">Easter Workshop</h1>
                 <div className="col anim">
                   <p>
-                    Lorem ipsum dolor sit amet consectetur. Egestas euismod nec
-                    sit sed massa turpis in. Sit praesent arcu leo lectus
-                    pellentesque. Ornare elit orci morbi volutpat. Ut fermentum
-                    lorem morbi quis risus amet urna. Urna egestas lorem.
+                    We have organised multiple workshops at our school to collect cards made by other children in younger classes. Our team collected 170 beautiful cards !!!
                   </p>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur. Egestas euismod nec
-                    sit sed massa turpis in. Sit praesent arcu leo lectus
-                    pellentesque. Ornare elit orci morbi volutpat. Ut fermentum
-                    lorem morbi quis risus amet urna. Urna egestas lorem.
-                  </p>
+
                 </div>
               </div>
             </div>
@@ -255,17 +243,9 @@ const PastProjects = () => {
                 <h1 className="anim">Signify Elegance</h1>
                 <div className="col anim">
                   <p>
-                    Lorem ipsum dolor sit amet consectetur. Egestas euismod nec
-                    sit sed massa turpis in. Sit praesent arcu leo lectus
-                    pellentesque. Ornare elit orci morbi volutpat. Ut fermentum
-                    lorem morbi quis risus amet urna. Urna egestas lorem.
+                    Following our Easter themed workshop last week, we went to the biggest children's hospital in Poland Centrum Zdrowia Dziecka in order to give our Easter cards to children. We thank everyone who helped us by drawing these amazing 170 cards, and the whole team for helping with organizing the workshop. Together we helped over 70 patients!
                   </p>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur. Egestas euismod nec
-                    sit sed massa turpis in. Sit praesent arcu leo lectus
-                    pellentesque. Ornare elit orci morbi volutpat. Ut fermentum
-                    lorem morbi quis risus amet urna. Urna egestas lorem.
-                  </p>
+
                 </div>
               </div>
             </div>

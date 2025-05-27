@@ -13,7 +13,7 @@ body {
     width: 100%;
     overflow: hidden;
     z-index: 10;
-    margin-bottom: -150vh; /* Negative margin to pull next section closer */
+    margin-bottom: 0vh; /* Negative margin to pull next section closer */
 }
 
 .wrapper {

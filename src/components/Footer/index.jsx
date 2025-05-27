@@ -16,22 +16,19 @@ const Footer = () => {
         <div className="footer-section">
           <h3>Quick Links</h3>
           <a href="#mission">Our Mission</a>
-          <a href="#about">About Us</a>
-          <a href="#projects">Projects</a>
+          <a href="#about-us">About Us</a>
+          <a href="#past-projects">Projects</a>
           <a href="#donate">Donate</a>
         </div>
 
         <div className="footer-section">
           <h3>Contact Us</h3>
-          <a href="mailto:contact@createforkids.org">
-            contact@createforkids.org
-          </a>
           <a
-            href="https://instagram.com/createforkids"
+            href="https://instagram.com/createforkidswarsaw"
             target="_blank"
             rel="noopener noreferrer"
           >
-            @createforkids
+            @createforkidswarsaw
           </a>
         </div>
       </div>

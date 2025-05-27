@@ -38,9 +38,9 @@ const Card = ({
           <div className="description">
             <p>{description}</p>
             <span className="link-container">
-              <a href={url} target="_blank" rel="noopener noreferrer">
-                See more
-              </a>
+              {/*<a href={url} target="_blank" rel="noopener noreferrer">*/}
+              {/*  See more*/}
+              {/*</a>*/}
               <svg
                 width="22"
                 height="12"

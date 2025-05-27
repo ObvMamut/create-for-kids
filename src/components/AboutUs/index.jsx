@@ -7,7 +7,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import karol from "../../images/karol.jpeg";
 import kira from "../../images/kira.jpeg";
 import laura from "../../images/laura.jpeg";
-import julian from "../../images/julian.jpeg";
+import julian from "../../images/julian2.jpeg";
 import mia from "../../images/mia.jpeg";
 import hela from "../../images/hela.jpeg";
 import franek from "../../images/franek.jpeg";
@@ -24,7 +24,7 @@ export const projects = [
     {
         title: "Laura Pietkiewicz",
         description:
-            "This is a story on the border between reality and imaginary, about the contradictory feelings that the insularity of a rocky, arid, and wild territory provokes—so French photographer Clément Chapillon describes his latest highly captivating project Les rochers fauves (French for 'The tawny rocks').",
+            "Hi!, My name is Laura and I'm the vice president for the Create For Kids, Warsaw Chapter. I'm in year 12 and don't know if I'm challenging the academics or if the academics are challenging me... either way, I love rowing, baking, drawing and have absolutely no free time",
         src: laura,
         url: "laura.jpeg",
         color: "#977F6D",
@@ -32,7 +32,7 @@ export const projects = [
     {
         title: "Julian Woroszylski",
         description:
-            "Though he views photography as a medium for storytelling, Zissou's images don't insist on a narrative. Both crisp and ethereal, they're encoded with an ambiguity—a certain tension—that lets the viewer find their own story within them.",
+            "Hi! I'm Julian, the lead developer and treasurer. I love programming and practicing compat sports",
         src: julian,
         url: "julian.jpeg",
         color: "#C2491D",
@@ -40,7 +40,7 @@ export const projects = [
     {
         title: "Kira Lyakh",
         description:
-            "The coastlines of Denmark are documented in tonal colors in a pensive new series by Danish photographers Ulrik Hasemann and Mathias Svold; an ongoing project investigating how humans interact with and disrupt the Danish coast.",
+            "Hi everyone! I'm Kira and I'm the social media manager of the Warsaw Create for Kids chapter. I'm also a swimmer and I don't know what I love most, being in pain everyday or skipping school because of practice",
         src: kira,
         url: "kira.jpeg",
         color: "#B62429",
@@ -48,7 +48,7 @@ export const projects = [
     {
         title: "Mia Kowalska",
         description:
-            "Passionate about visual storytelling, Mia blends classic photography techniques with modern digital artistry. Her work has been featured in several exhibitions highlighting emerging talent across Europe, focusing on urban landscapes and cultural identity.",
+            "Hi! My name is Mia and I'm the social media manager of the Warsaw Create for Kids chapter. I believe that music, cinema and art is my painkiller. It's a pleasure to be one of the members and to help children",
         src: mia,
         url: "mia.jpeg",
         color: "#6B7A8F",
@@ -56,7 +56,7 @@ export const projects = [
     {
         title: "Hela Nowak",
         description:
-            "With a background in architecture, Hela brings a unique structural perspective to her photography. She specializes in capturing the interplay between light and geometry in everyday spaces, transforming ordinary scenes into compelling visual narratives.",
+            "Hi! I'm Hela and I am attending Akademeia High School in Warsaw and currently I am in year 11! I love fashion, animals and photography",
         src: hela,
         url: "hela.jpeg",
         color: "#A7414A",
@@ -64,7 +64,7 @@ export const projects = [
     {
         title: "Franek",
         description:
-            "Dutch photographer Mark Rammers has shared with IGNANT the first chapter of his latest photographic project, 'all over again'—captured while in residency at Hektor, an old farm in Los Valles, Lanzarote.",
+            "Hi! My name is Franek and I am the secretary of the Warsaw Create For Kids chapter. I am 16 and studying at Warth School of London.",
         src: franek,
         url: "franek.jpeg",
         color: "#88A28D",

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Navbar.css";
-import logo from "../../images/img1.png"; // Make sure to add your logo to this path
+import logo from "../../images/logo.jpeg"; // Make sure to add your logo to this path
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -34,7 +34,7 @@ const Navbar = () => {
 
         <div className="nav-links">
           <div className="link-wrapper">
-            <a href="#home" className="nav-link">
+            <a href="/" className="nav-link">
               <span className="link-text">Home</span>
             </a>
           </div>
@@ -44,12 +44,12 @@ const Navbar = () => {
             </a>
           </div>
           <div className="link-wrapper">
-            <a href="#about" className="nav-link">
+            <a href="#about-us" className="nav-link">
               <span className="link-text">About</span>
             </a>
           </div>
           <div className="link-wrapper">
-            <a href="#projects" className="nav-link">
+            <a href="#past-projects" className="nav-link">
               <span className="link-text">Projects</span>
             </a>
           </div>
