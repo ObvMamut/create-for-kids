@@ -16,7 +16,7 @@ export const projects = [
   {
     title: "Karol Dąbrowski",
     description:
-      "Hey, I'm Karol, high schooler and president of the Warsaw Create for Kids Chapter, bringing happy vibes to hospitals. I worship Nolan films and occasionnally trying not to lose money on stocks",
+      "Hey, I'm Karol, high schooler and president of the Warsaw Create for Kids Chapter, bringing happy vibes to hospitals. I worship Nolan films and occasionnally try not to lose money on stocks",
     src: karol,
     url: "karol.jpeg",
     color: "#BBACAF",
@@ -32,7 +32,7 @@ export const projects = [
   {
     title: "Julian Woroszylski",
     description:
-      "Hi! I'm Julian, the lead developer and treasurer. I love programming and practicing compat sports",
+      "Hi! I'm Julian, the lead developer and treasurer. I love programming and practicing combat sports",
     src: julian,
     url: "julian.jpeg",
     color: "#C2491D",
