@@ -18,21 +18,27 @@ const Mission = () => {
   const achievements = [
     {
       id: 1,
-      number: "400",
+      number: "+700",
       label: "Złotys Raised",
       icon: "💰",
     },
     {
       id: 2,
-      number: "200",
+      number: "+500",
       label: "Cards Made",
       icon: "✉️",
     },
     {
       id: 3,
-      number: "15",
+      number: "180",
       label: "Volunteers",
       icon: "👥",
+    },
+    {
+      id: 4,
+      number: "8",
+      label: "Institutions",
+      icon: "🏢",
     },
   ];
 
@@ -130,7 +136,12 @@ const Mission = () => {
           Our Mission
         </h2>
         <p className="mission-text" ref={textRef}>
-          Create For Kids : an organisation that promotes creativity and brings inspiration to hospitalised children. We believe that creating art brings joy and hope to younh patients. We foster imagination and creativity and encourage a positive and uplifting environment in pediatric wards. We collect cards, art, toys and deliver them to young patients. You can write supportive cards that we will later deliver.
+          Create For Kids : an organisation that promotes creativity and brings
+          inspiration to hospitalised children. We believe that creating art
+          brings joy and hope to younh patients. We foster imagination and
+          creativity and encourage a positive and uplifting environment in
+          pediatric wards. We collect cards, art, toys and deliver them to young
+          patients. You can write supportive cards that we will later deliver.
         </p>
 
         <div className="achievements-container" id="achievements">

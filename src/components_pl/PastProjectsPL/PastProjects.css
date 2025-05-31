@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@200;400;700&display=swap");
+
+body {
+    margin: 0;
+    height: 100vh;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Reduced wrapper height to minimize gap */
+.past-projects-wrapper {
+    position: relative;
+    height: 200vh; /* Reduced from 300vh to minimize gap */
+    width: 100%;
+    overflow: hidden;
+    z-index: 10;
+    margin-bottom: 0vh; /* Negative margin to pull next section closer */
+}
+
+.wrapper {
+    overflow-x: hidden;
+    position: relative;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+svg {
+    position: absolute;
+    top: 10em;
+    left: 10vw;
+    width: 50vw;
+    z-index: 10;
+}
+
+.mask {
+    width: 0;
+}
+
+.container {
+    display: flex;
+    width: 300vw;
+    position: relative;
+}
+
+.section-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+.image-container {
+    flex: 0 0 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.image-container img {
+    max-width: 100%;
+    max-height: 70%;
+    border-radius: 8px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.text-container {
+    flex: 0 0 50%;
+    padding: 0 20px;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+.col p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+section {
+    width: 100vw;
+    height: 100vh;
+    padding: 10vh 10vw;
+}
+
+section h1 {
+    font-size: 3rem;
+    margin: 0 0 1rem;
+    font-family: "Playfair Display", serif;
+}
+
+section span {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: #555;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+    max-width: 100%;
+}
+
+.header {
+    position: absolute;
+    top: 1em;
+    left: 10vw;
+    font-size: 4rem;
+    font-family: "Playfair Display", serif;
+    color: #333;
+    z-index: 20;
+    opacity: 0;
+}
+
+/* Hide GSAP markers completely */
+.gsap-marker-start,
+.gsap-marker-end,
+.gsap-marker-scroller-start,
+.gsap-marker-scroller-end {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+@media (max-width: 768px) {
+    .section-content {
+        flex-direction: column;
+    }
+
+    .image-container,
+    .text-container {
+        flex: 0 0 100%;
+        width: 100%;
+    }
+
+    .image-container {
+        margin-bottom: 2rem;
+    }
+
+    section h1 {
+        font-size: 2rem;
+    }
+
+    .col {
+        flex-direction: column;
+    }
+
+    .col p {
+        width: 100%;
+    }
+
+    .past-projects-wrapper {
+        margin-bottom: -30vh;
+    }
+}

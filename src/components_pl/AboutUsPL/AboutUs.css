@@ -1,0 +1,51 @@
+.about-us {
+    position: relative;
+    margin-top: 2vh;
+    padding: 0 0px;
+    background-color: #f1efec;
+    min-height: 350vh; /* Reduced from 490vh for better section transition */
+}
+
+.section-header {
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 50px;
+}
+
+.section-header h1 {
+    font-family: "Title";
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.section-header p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.cards-container {
+    position: relative;
+    /* Reduced padding to minimize the gap between sections */
+    padding-bottom: 5vh; /* Reduced from 20vh */
+}
+
+/* Add a visible marker at the end of About Us section
+   This helps debug ScrollTrigger transitions */
+#about-us-end-marker {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: transparent;
+}
+
+@media (max-width: 1100px) {
+    .about-us {
+        margin-top: 20vh; /* Reduced from 30vh */
+        min-height: 400vh; /* Reduced from 550vh */
+    }
+
+    .section-header h1 {
+        font-size: 2.5rem;
+    }
+}
